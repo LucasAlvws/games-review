@@ -1,0 +1,8 @@
+language: python
+dist: jammy  # Ubuntu 22.04
+python: "3.10"
+
+install:
+    - pip install -q -r requirements-dev.txt
+scripts:
+    - pylint games_review
