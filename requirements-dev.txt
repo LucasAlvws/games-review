@@ -1,4 +1,0 @@
--r requirements.txt
-
-pylint==3.3.4
-ipython==8.32.0

@@ -1,9 +1,14 @@
 language: python
 dist: jammy  # Ubuntu 22.04
-python: "3.10"
+
+python:
+  - "3.10"
 
 install:
-    - pip install -q -r requirements-dev.txt
-scripts:
-    - pylint games_review
-    - python manage.py test
+  - pip install --upgrade pip
+  - pip install poetry
+  - poetry install  # Instala todas as dependências (incluindo dev)
+
+script:
+  - poetry run pylint games_review
+  - poetry run python manage.py test
